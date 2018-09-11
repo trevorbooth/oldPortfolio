@@ -1,0 +1,344 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background:#ccc;
+	font: 16px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #181818;
+	font-family: "Georgia", "Times New Roman", serif;
+	font-weight: normal; 
+}
+
+h2 {
+	font-size: 1em;
+	text-align: center;
+	margin: .2em 0 1.2em 0;
+}
+
+h3 {
+	font-size: 2em;
+	margin: .5em 0;
+}
+
+h4 {
+	font-size: 1em;
+	margin: .5em 0;
+}
+
+p {
+	font-size: .875em;
+}
+
+li {
+	list-style-type: none;
+}
+
+img {
+	border: none;
+	max-width: 100%;
+}
+
+	.imgrt {
+		float: right;
+		padding: 5px;
+	}
+
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.sixteen {
+	width: 100%;
+}
+
+.one-third, .one-fourth, .two-thirds, .three-fourths {
+	float: right;
+	margin: 0 10px 0 0;
+}
+
+.one-third {
+	width: 31.65%;
+}
+
+.one-fourth {
+	width: 23%;
+}
+
+.two-thirds {
+	width: 63.3%;
+	padding-left: .625em;
+}
+
+.three-fourths {
+	width: 73%;
+	padding-left: .625em;
+}
+
+
+.logo {
+	width:100px;
+	height:100px;
+	display:block;
+	border-radius:55px;
+	font-size:4em;
+	line-height:100px;
+	text-align:center;
+	background:#000;
+	margin: 0 auto;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+          transition:         transform 1s ease-in-out;
+}
+
+	.logo:hover{
+		background: #813772;
+		font-color: black;
+		-webkit-transform: rotate(3600deg);
+          transform: rotate(3600deg);
+}
+	}
+	
+	.sixteen .logo a, .logo a:hover, .logo a:focus {
+		color: red;
+		text-decoration: none;
+		display: block;
+	}
+
+nav {
+	text-align: center;
+	padding-bottom: 25px;
+	width: 100%;
+	position: fixed;
+	margin: 20px;
+}
+
+    nav li {
+    	display: inline;
+    	width: 25%;
+    	float: left;
+    	border-top: 2px solid #000;
+	    border-bottom: 2px solid #000;
+	    text-transform: uppercase;
+    }
+    
+    nav li:hover, .current{
+    	 -webkit-transition: all 1s ease-in-out;
+    	  -moz-transition: all 1s ease-in-out;
+    	 transition: all 1s ease-in-out;
+    	border-top: 2px solid #813772;
+	    border-bottom: 2px solid #813772;
+	    color: pink;
+    }
+    nav a {
+    	text-decoration: none;
+    	display: block;
+    	padding: 20px 20px 20px 20px;
+
+    }
+
+footer {
+	display: block;
+	clear: both;
+	font-size: .8em;
+	float: right;
+}
+
+	footer a {
+		text-decoration: none;
+	}
+	
+	footer a:hover {
+		text-decoration: underline;
+	}
+
+.space {
+	padding-bottom: 30px;
+}
+
+/* #Links
+================================================== */
+a, a:visited { 
+	color: #888; 
+	text-decoration: none;
+	outline: 0; 
+}
+	
+a:hover, a:focus { 
+	color: #000;
+}
+
+p a, p a:visited { 
+	line-height: inherit; 
+}
+
+/* #Page Styles
+================================================== */
+
+h3.home {
+	margin: 1em 0 .50em 0;
+	text-transform: uppercase;
+	display: block;
+	font-size: 10em;
+	text-align: center;
+	letter-spacing: .313em;
+	color: #000;
+}
+
+.ribbon {
+ background: #000;
+ color: #FFF;
+ text-align: center;
+ font: 2em 'Acme', sans-serif;
+ letter-spacing: .1em;
+ padding: .1em;
+ margin-bottom: 1em;
+}
+
+.links li {
+	padding:.5em 0;
+	border-bottom: 2px solid #FF0;
+}
+
+.links li a {
+	text-decoration: none;
+}
+
+.port {
+	clear: left;
+	padding-top: .5em;
+	display: block;
+}
+
+.port img{
+	float: left;
+	width:200px;
+	height:200px;
+	display:block;
+	border-radius:100px;
+	margin: 0 3em 1.5em 0;
+	
+}
+
+.port p {
+	padding-top: 3em;
+}
+
+
+@font-face {
+    font-family: 'HeydingsCommonIconsRegular';
+    src: url('../font/heydings_icons-webfont.eot');
+    src: url('../font/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/heydings_icons-webfont.woff') format('woff'),
+         url('../font/heydings_icons-webfont.ttf') format('truetype'),
+         url('../font/heydings_icons-webfont.svg#HeydingsCommonIconsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+	font: 1.7em HeydingsCommonIconsRegular;
+}
+
+.contact li {
+	display: inline;
+	padding-right: 1em;
+}
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+		.mobilecontainer {
+        	padding-bottom: 364px;
+        	position: relative;
+        }
+		
+		.one-third, .two-thirds, .one-fourth, .three-fourths {
+			width: 95%;
+			margin-left: .1em;
+			float: none;
+		}
+		
+		.two-thirds {
+			padding-left: 0;
+		}
+		
+		.three-fourths {
+			padding-left: 0;
+		}
+		
+		.space {
+			padding-bottom: 0;
+		}
+
+        nav {
+        	position: absolute;
+        	bottom: 0;
+        }
+    
+	        nav li{
+	    	width: 100%;
+	    	height: 57px;
+	    	padding: 5px 0 0 0;
+	    	margin: 2px 0 0 0;
+	    	border-bottom: 0;
+	    	}
+	    	
+	    	nav li:last-child, nav li:hover:last-child {
+	    		border-bottom: 2px solid #000;
+	    	}
+	    	
+	    	nav li:hover, .current{
+	   		border-bottom:0;
+	    	}
+	    
+	           h3.home, .ribbon {
+    	    display: none;
+        }
+        
+        .port img {
+        	float: none;
+			margin: 0 auto;
+        }
+        
+        .port p {
+        	padding-top: 2em;
+        }
+        
+        .contact li {
+		display: block;
+		}
+}

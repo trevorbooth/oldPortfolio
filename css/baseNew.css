@@ -1,0 +1,921 @@
+/*
+
+
+
+=====       TREVOR BOOTH's PORTFOLIO   =====
+
+
+
+         ++++++ TABLE OF CONTENTS ++++++
+
+
+General - html, *, body
+
+Background Scrolling - .parallax, .parallax2
+
+Header - #trevor, .gone, .here
+
+Landing Page Icons 
+
+Main Menu Navigation - #menu, #index, #port, #contact
+
+Who am I? - #who, .socialContent, #fb, #twitter, #insta, #blog
+
+Skills Block - Port section, School Work Section, PS lightbox, Skills icons
+
+Contact Block - #contactBlock, Form, .contactContent
+
+Footer - copyright
+
+Colors:
+
+      #cf3f3f - Blood & Sand
+      
+      #7b366f - Graveyard Mist
+
+      #f91208 - Fire Sky
+
+      #4F7CAC - Steel Blue
+
+      #fedc00 - Sun Shine
+
+
+
+
+
+
+
+
+
+/*===========    Pre-Load design   ===========
+@keyframes loader{
+    0%{
+        z-index: 99999999;
+        background-color: rgba(255,255,255,1);
+        opacity: 1;
+    }
+    50%{
+        z-index: 99999999;
+         background-color: rgba(255,255,255,.9);
+        opacity: 1
+    }
+    
+    100%{
+         background-color: rgba(255,255,255,.8);
+        opacity: .2;
+          z-index: 99999999;  
+    }
+}
+@keyframes loaderIcon{
+    0%{
+        
+        opacity: 1;
+        transform: rotate(1deg);
+        z-index: 99999999;
+    }
+    50%{
+         z-index: 99999999;
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+    
+    100%{
+        z-index: 99999999;
+        opacity: .5;
+        transform: rotate(360deg);
+    }
+}
+
+
+.loader{
+    animation: 0s linear 0s 0s loader;
+    height: 100%;
+    position: relative;
+    transition: 1s;
+    
+}
+ .loader img{
+     animation: 0s linear 0s 0s loaderIcon;
+    opacity: 0;
+    position:absolute;
+    top: 25%;
+    right: 30%;
+    transition: .5s;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+.loader h4{
+    animation: 5s linear 0s infinite loader;
+    opacity: 0;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 75%;
+    right: 50%;
+    font-size: 2em;
+    color: #111;
+    font-family: 'Nunito', sans-serif;
+    
+}
+*/
+
+
+
+
+/*GENERAL*/
+html{
+    height: 100%;
+    min-width: 400px;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+ 
+/*========== Background Scrolling  ================ */
+.parallax { 
+    
+   
+
+    
+    height: 100%; 
+
+    background-image: url(../images/windBG.JPG);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallaxSkills{/*=== Skills Parallax  ==== */
+    
+
+    
+    
+height: 100%; 
+
+    background-image: url(../images/output001.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+/*========== Header  ==    #trevor  ================ */
+@keyframes onLoadHeader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#trevor{
+    animation: 2s ease-in 0s 1 onLoadHeader;
+    color: #FFF;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    border: solid 5px #fff;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0px 250px 30px -25px rgba(0,0,0,.7);
+    transform: translate(-50%, 90%);
+    font-size: 4em;
+}
+.desdev{
+    animation: 2s ease-in 0s 1 onLoadHeader;
+    color: #FFF;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    font-family: 'Nunito', sans-serif;
+    transform: translate(-50%, 90%);
+    font-size: 1.5em;
+}
+ 
+.gone{
+    opacity: 0;
+    transition-timing-function: ease-out;
+    transition-duration: .85s;
+}
+.here{
+    opacity: 1;
+    transition-timing-function: ease-in;
+    transition-duration: .75s;
+    
+}
+
+
+
+
+
+ .fa-home, .fa-briefcase, .fa-envelope-o {/*====== Landing Page  ICONS   =========*/
+    float: right;
+    transform: rotate(-90deg);
+    color: #fff;
+    margin: 7px;
+}
+@keyframes down {
+  0% {
+    opacity: 1;
+  }
+    50% {
+    opacity: .4;
+}
+    100% {
+    opacity: 1;
+    }
+}
+
+.down1{
+    animation: 4s ease-out .5s infinite down;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 300%);
+    color: #fff;
+    opacity: 0;
+    transition: 2s;
+    z-index: 9999;
+}
+
+
+/*============  Main Menu Navigation   ========== */
+#menu a {
+    position: fixed; 
+    top: -50px; 
+    transition: 0.3s; 
+    padding: 7px; 
+    width: 220px; 
+    text-decoration: none; 
+    font-size: 1.9em;; 
+    border-radius: 0 5px 5px 0; 
+    z-index: 990;
+    transform: rotate(90deg);
+    text-align: left;
+    color: #FFF;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+    #menu a:hover {
+       top: 100px; 
+       box-shadow: 1px 1px 5px #111;
+    }
+ 
+@keyframes onLoadMenu {
+  0% {
+    top: -200px;
+    box-shadow: 1px 1px 5px #111;
+  }
+    50% {
+    top: 150px;
+    box-shadow: 1px 1px 5px #111;
+}
+    75%{
+        top: 140px;
+    box-shadow: 1px 1px 5px #111;
+    }
+    100% {
+    top: -43px;
+    }
+}
+#index {
+    left: 3%;
+    background-color: transparent;
+    animation: 1.7s ease-in 0s 1 onLoadMenu;
+}
+
+
+#port {
+    left: 8%;
+    background-color: transparent;
+    animation: 1.9s ease-in 0s 1 onLoadMenu;
+}
+
+
+#contact {
+    left: 13%;
+    background-color: transparent; 
+    animation: 2.2s ease-in 0s 1 onLoadMenu;
+}
+
+
+
+
+
+/*============  Who am I section?   ========== */
+#who{
+    
+    background-color: #cf3f3f;
+    height: 1000px;
+    color: #FFF;
+    overflow: hidden;
+    position: relative;
+    
+}
+    #who p{
+        font-size: 1.4em;
+        text-indent: 50px;
+        width: 85%;
+        display: block;
+        margin: auto;
+        padding-top: 35px;
+        font-family: 'Nunito', sans-serif;
+        letter-spacing: .6px;
+        line-height: 1.4
+    }
+
+    #who p:last-child{
+        margin-top: 20px;
+    }
+    #who h3{
+        font-size: 3em;
+        text-align: center;
+        padding: 50px 0;
+        font-family: 'Nunito', sans-serif;
+    }
+    #who img{
+        height: 235px;
+        width: auto;
+        border-radius: 50%;
+        display: block;
+        margin:auto;
+        box-shadow: -1px 0px 5px #111;
+    }
+    #who p a{
+       color: #fedc00;
+    }
+/* Social Media */
+.socialContent a{
+    position: absolute; 
+    right: -160px; 
+    transition: 0.3s; 
+    padding: 7px; 
+    width: 225px; 
+    text-decoration: none; 
+    font-size: 1.9em;
+    border-radius: 5px 0 0 5px; 
+    color: #fedc00;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+}
+   .socialContent a i{
+       float: left;
+       padding-right: 47px;
+   }
+   .socialContent a:hover, .socialContent a:focus {
+       right: 10px; 
+       box-shadow: -1px 0px 5px #111;
+   }
+#blog {
+    position: absolute;
+    top: 5%;
+   
+    background-color: transparent;
+    
+}
+
+#twitter {
+    top: 12%;
+    background-color: transparent;
+    
+}
+#insta{
+    top: 19%;
+    background-color: transparent;
+    
+}
+#fb{
+    top: 26%;
+    background-color: transparent;
+   
+    
+}
+
+/*=========   Skills Block =========*/
+#skills{
+   
+    margin-top: -34px;
+    background-color: #7b366f;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+/*Port Section*/
+.portBTN{
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Archivo Black', sans-serif;
+    border: 1px solid #FFF;
+    padding: 13.5px 27px;
+    background-color: transparent;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: #FFF; 
+    font-size: 2em;
+    outline: none;
+    box-shadow: 3px 3px 5px #111;
+}
+
+.sidenavContentP a {
+     left: -700px;
+   position: absolute;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    width: 20%;
+    text-align: center;
+    box-shadow: 1px 1px 5px #111;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.1em; 
+}
+
+    
+    
+
+
+
+
+.showP a{
+    left: 10px;
+}
+
+  .showP a:hover{
+    left: 20px;
+  }
+
+.wolzen {
+    color: #fedc00;
+    top: 10%;
+    transition: .4s;
+}
+
+.markup{
+    color: #fedc00;
+    top: 30%;
+    transition: .5s;
+}
+
+.tech{
+    color: #fedc00;
+    top: 50%;
+    transition: .6s;
+}
+.tool{
+    color: #fedc00;
+    top: 70%;
+    transition: .2s;
+}
+.php{
+    color: #fedc00;
+    top: 90%;
+    transition: .1s;
+}
+
+
+
+
+/*School Work Section*/
+.sidenavContentS a{
+    
+    right: -700px;
+   position: absolute;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    width: 20%;
+    text-align: center;
+    box-shadow: 1px 1px 5px #111;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.1em; 
+}
+
+
+.schoolBTN{
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Archivo Black', sans-serif;
+    border: 1px solid #FFF;
+    padding: 13.5px 27px;
+    background-color: transparent;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: #FFF; 
+    font-size: 2em;
+    outline: none;
+    box-shadow: 3px 3px 5px #111;
+    
+}
+.schoolBTN:hover, .schoolBTN:focus, .portBTN:hover, .portBTN:focus, .psBTN:hover, .psBTN:focus {
+   box-shadow: 3px 3px 5px #111;
+}
+.schoolBTN:active, .portBTN:active, .psBTN:active{
+    box-shadow: none;
+
+}
+
+
+  .showS a{
+    right: 10px;
+  }
+  .showS a:hover{
+    right: 20px;
+  }
+#htmlNovice{
+    color: #fedc00;
+    top: 5%;
+    transition: .1s;
+    
+}
+#designNovice{
+    color: #fedc00;
+    top: 15%;
+    transition: .29s;
+}
+#cssNovice{
+    color: #fedc00;
+    top: 25%;
+    transition: .25s;
+}
+#cssNewbie{
+    color: #fedc00;
+    top: 35%;
+    transition: .21s;
+}
+#workflowNovice{
+    color: #fedc00;
+    top: 45%;
+    transition: .18s;
+}
+#jsNovice{
+    color: #fedc00;
+    top: 55%;
+    transition: .14s;
+}
+#sqlNovice{
+    color: #fedc00;
+    top: 65%;
+    transition: .1s;
+}
+#phpNovice{
+    color: #fedc00;
+    top: 75%;
+    transition: .08s;
+}
+
+
+/* Space left on screen for more work to come*/
+
+
+
+
+/* photoshop lightbox*/
+.psBTN{
+    margin: 0;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Archivo Black', sans-serif;
+    border: 1px solid #FFF;
+    padding: 13.5px 27px;
+    background-color: transparent;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: #FFF; 
+    font-size: 1em;
+    outline: none;
+    box-shadow: 3px 3px 5px #111;
+}
+.psBTN:hover, .psBTN:focus{
+   box-shadow: 3px 3px 5px #111;
+}
+.psBTN:active{
+    box-shadow: none;
+}
+/* Skills Block icons*/
+.fa-camera-retro, .fa-file-text-o, .fa-suitcase {
+    padding-right: 20px;
+}
+
+
+
+
+/*=========   Contact Section (Form) =========*/
+
+#contactBlock{
+    height: 1000px;
+    background-color: #4F7CAC;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+  #contactBlock p{
+      font-size: 2em;
+      width: 50%;
+      text-align: center;
+      display: block;
+      margin: auto;
+      padding-top: 50px;
+      color: #FFF;
+ }
+  #contactBlock h3{
+      text-align: center;
+      padding-top: 10px;
+      font-size: 2.5em;
+      color: #fff;
+ }
+#name{
+    top: 20%;
+    
+}
+  .name{
+    top: 16%;
+}
+#email1{   
+    top: 35%;
+}
+.email1{
+    top: 31%;
+}
+#phone1{
+    top: 50%;
+}
+.phone1{
+    top: 46%;
+}
+#comments{    
+    height: 150px;
+    top: 63%;
+     font-size: 20px;
+     position: absolute;
+    right: 25%;
+    width: 50%;
+    background-color: transparent;
+    color: #FFF;
+    border: #fedc00 2px solid;
+    border-radius: 3px;
+    padding: 10px;
+}
+.comments{
+    top: 59%;
+}
+#formBTN{
+    top: 85%;
+     position: absolute;
+    right: 40%;
+    width: 20%;
+    background-color: rgba(0,0,0,.25);
+    border: #fedc00 2px solid;
+    border-radius: 3px;
+    color: #FFF;
+    padding: 15px
+}
+ #formBTN:hover{
+    background-color: rgba(255,255,255,.25);
+     color: black;
+     transition: 1s;
+}
+ #formBTN:value{
+    font-family: 'Nunito', sans-serif;
+}
+.warning{
+    color: red;
+    font-size: .9em;
+}
+textarea{
+    resize: none;
+    outline: none;
+}
+textarea::placeholder{
+    color: #FFF;
+}
+input::-webkit-input-placeholder { /* IE */
+color: #FFF !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #FFF !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #FFF !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #FFF !important;  
+}
+#name, .name, #email1, .email1, #phone1, .phone1, .warning{
+    position: absolute;
+    right: 25%;
+    width: 50%;
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+    border-bottom:  #fedc00 2px solid;
+}
+input:focus {
+    outline: none;
+   
+}
+
+.warning{
+    border: none !important;
+    color: #cf3f3f !important;
+}
+
+
+/*=========   Footer =========*/
+
+footer{
+    height: 32px;
+    background-color: #fedc00;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1em;
+    display: block;
+    overflow: hidden
+}
+  footer ul{
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    
+  }
+  footer ul li{
+    width: 24.7%;
+    display: inline-block;
+    border-right: solid 2px #666;
+  }
+
+#phone, #email{
+    text-decoration: none;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*======          BREAKPOINT 1750PX       =============*/
+
+
+@media only screen and (max-width: 1750px) {
+   
+    
+    footer{
+        font-size: .75em;
+    }
+}
+
+
+/*======          BREAKPOINT 1475PX       =============*/
+@media only screen and (max-width: 1475px) {
+   
+    
+    footer{
+        font-size: .5em;
+    }
+}
+/*======          BREAKPOINT 1300PX       =============*/
+@media only screen and (max-width: 1300px) {
+   
+    footer{
+        background-color: #4F7CAC; 
+    }
+    
+    #email, #phone{
+        display: none;
+    }
+    footer ul li{
+        width: 50%;
+        border-right: none;
+         }
+    #menu a{
+    animation: none;
+    transition: none; 
+    width: 40px; 
+    text-decoration: none; 
+    font-size: 1em;; 
+    border-radius: none; 
+    transform: none;
+    text-align: left;
+    top: 15px;
+    padding: 1px;    
+    }
+     #menu a:hover, #menu a:active {
+        top: 15px;
+         box-shadow: none;
+    }
+    #index{
+        left: 20%;
+        
+    }
+     #port{
+        left: 45%;
+         
+    }
+     #contact{
+        left: 75%;
+    }
+    #who p{ 
+     font-size: 1.2em
+    }
+    .schoolBTN, .portBTN{
+        font-size: 1.5em
+    }
+    #skills p{
+        font-size: .75em
+    }
+    .sidenavContentS a{
+        font-size: .75em
+    }
+    #contactBlock h3{
+        font-size: 1.5em
+    }
+    #formBTN{
+        font-size: .85em;
+        margin-top: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+/*======          BREAKPOINT 979PX       =============*/
+@media only screen and (max-width: 979px) {
+   
+    #who h3{
+        font-size: 1em;
+    } 
+    #who img{
+        height: 150px;
+    }
+    #who p{ 
+     font-size: 1em;
+     width: 96%;
+    }
+    #trevor{
+        font-size: 2em;
+    }
+    .desdev{
+        font-size: 1em;
+    }
+     #formBTN, .schoolBTN, .portBTN, .psBTN{
+        font-size: .75em
+    }
+     #skills p{
+        font-size: .5em
+    }
+    .sidenavContentS a{
+        font-size: .5em
+    }
+    .fa{
+        color: transparent;
+    }
+    .down1/*Icon*/{
+        display: none;
+        animation: none;
+    }
+    
+    .socialContent{
+        display: none;
+    }
+    form{
+        font-size: .5em;
+    }
+   
+
+    #contactBlock, #skills{
+        height: 750px;
+    }
+    #comments{
+        right: 28%;
+    }
+    
+}
