@@ -1,6 +1,6 @@
 <?php ob_start();
 try{
-include './includes/title.php';
+//include './includes/title.php';
 $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {
